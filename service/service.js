@@ -6,15 +6,20 @@
     //TODO FIX THIS! The lot size/driveway size are logging undefined?
     //TODO Object to store day and time selected
     var info = {};
+    var whatsClicked = {};
     // api();
     return {
       getInfo: getInfo,
       setInfo: setInfo,
+      itemClicked: itemClicked
       // api: api
     }
     function setInfo(information) {
       info = information;
-      // theService = selected;
+    }
+
+    function itemClicked(clicked) {
+      whatsClicked = clicked;
     }
     function getInfo(){
       return info;
