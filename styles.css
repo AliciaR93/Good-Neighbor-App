@@ -1,0 +1,325 @@
+/*MOBILE STARTS HERE*/
+  body {
+    background-color: #E0FFFF;
+    font-family: cursive;
+  }
+  /*Styling for the Welcome Page*/
+  h1 {
+    text-align: center;
+    color: orange;
+  }
+  #input input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border: 2px solid black;
+    margin-top: 10px;
+  }
+  .lot {
+    display: block;
+    width: 300px;
+    margin-left: 20px;
+  }
+  .driveway {
+    display: block;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  #submit {
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+  /*Styling for the Select option Page  */
+  .pickAButton button {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  .snow {
+    background-image: url(snowy-street.jpg);
+    font-size: 20px;
+    color: #FFF;
+  }
+  .grass {
+    background-image: url(grass.jpg);
+    color: #FFF;
+    font-size: 20px;
+  }
+  .days {
+    text-align: center;
+  }
+  .times {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .selected {
+    background-color: red;
+  }
+  .theScheduleButton {
+    margin-left: 130px;
+  }
+  /*Styling for the Message Page*/
+  .thankYou {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .ok {
+    margin-left: 125px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 450px;
+    background-color: #E6E6FA;
+    color: blue;
+  }
+
+/*END OF MOBILE*/
+
+/*TABLET MEDIA QUERY STARTS HERE*/
+/*iPad Pro*/
+@media only screen and (min-width: 768px) {
+  .welcome {
+    margin-top: 200px;
+  }
+  h1 {
+    text-align: center;
+    color: orange;
+  }
+  #input input {
+    width: 600px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    border: 1px solid black;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-color: #191970;
+  }
+  .lot {
+    display: block;
+    width: 400px;
+    height: 50px;
+    margin-left: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 40px;
+  }
+  .driveway {
+    display: block;
+    width: 400px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  #submit button {
+    margin-left: 325px;
+    margin-top: 10px;
+    width: 100px;
+    height: 75px;
+    margin-top: 80px;
+    border-radius: 10px;
+  }
+  /*Styling for the Select option Page*/
+  .pickAButton button {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+    border-radius: 20px;
+    border: 5px solid black;
+  }
+  .snow {
+    background-image: url(snowy-street.jpg);
+    font-size: 50px;
+    color: #FFF;
+  }
+  .grass {
+    background-image: url(grass.jpg);
+    color: #FFF;
+    font-size: 50px;
+  }
+  /*Styling for the schedule page*/
+  #schedule h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 0;
+  }
+  .choose {
+    text-align: center;
+    font-size: 20px;
+  }
+  .days {
+    font-size: 20px;
+    text-align: center;
+  }
+  .times {
+    height: 40px;
+    width: 80px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .theScheduleButton button {
+    margin-left: 350px;
+    margin-top: 30px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+  /*Styling for the Message Page*/
+  .thankYou {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+  }
+  .reciept {
+    font-size: 40px;
+  }
+  .ok {
+    margin-left: 300px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 550px;
+    background-color: #E6E6FA;
+    color: blue;
+  }
+}
+/*TABLET MEDIA QUERY ENDS HERE*/
+
+
+/*DESKTOP VIEW STARTS HERE*/
+@media only screen and (min-width: 1024px) {
+body {
+  background-color: #E0FFFF;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/*Styling for the welcome page*/
+#welcome {
+  background-color: grey;
+  height: 900px;
+  width: 900px;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#welcome h1 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  font-size: 50px;
+}
+
+#welcome p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #D3D3D3;
+  font-size: 20px;
+}
+
+#input input {
+  border-radius: 10px;
+  width: 600px;
+  height: 50px;
+  margin-left: 150px;
+  margin-bottom: 10px;
+}
+
+#submit button {
+  clear: both;
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.lot {
+  float: left;
+  margin-left: 10px;
+  height: 50px;
+}
+
+.driveway {
+  height: 50px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-top: 40px;
+}
+
+/*Styling for the select page*/
+
+.pickAButton button {
+  margin-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+}
+
+/*Styling for schedule page*/
+
+#schedule {
+  margin: 0 auto;
+}
+
+#schedule h1 {
+  text-align: center;
+  padding-top: 40px;
+  color: grey;
+}
+
+#schedule .choose {
+  text-align: center;
+}
+
+#schedule p {
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+#schedule button {
+  margin-left: 20px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #FFF;
+  border: 2px solid blue;
+}
+
+.theScheduleButton {
+  margin-left: 450px;
+}
+
+/*Styling for message page*/
+
+body {
+  height: 800px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.thankYou {
+  font-size: 40px;
+}
+
+.reciept {
+  font-size: 30px;
+  text-align: center;
+}
+
+.ok {
+  margin-left: 450px;
+  margin-bottom: 200px;
+}
+}
+/*DESKTOP ENDS HERE*/

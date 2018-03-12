@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GoodNeighborApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <title>Good Neighbor</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/goodNeighbor.jpg" type="image/x-icon">
+  <link rel="icon" href="/goodNeighbor.jpg" type="image/x-icon">
+  <!--end Favicon-->
+</head>
+<body>
+  <ng-view></ng-view>
+  <!-- ng-view is used when routing-->
+   <!-- CDN needed for angular, and CDN needed for routing-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+  <script src="module/module.js"></script>
+  <script src="config/config.js"></script>
+  <script src="components/scheduleComponent.js"></script>
+  <script src="components/welcomeComponent.js"></script>
+  <script src="components/messageComponent.js"></script>
+  <script src="components/selectComponent.js"></script>
+  <script src="service/service.js"></script>
+</body>
+
+</html>

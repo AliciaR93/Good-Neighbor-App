@@ -1,0 +1,43 @@
+<div class="welcome">
+  <form id="welcome">
+    <h1>Welcome to Good Neighbor!</h1>
+    <p>
+      Here you can schedule for someone in your neighborhood to cut your grass or shovel your snow. We have various time slots to choose from, so just enter your name and address below and click submit so we can get started!
+    </p>
+    <div id="input">
+      <!--info is the { }, which is inside the controller, inside the welcomeComponent-->
+      <!--so $ctrl referencing the controller, taking the object which is info-->
+      <!--and getting the properties inside that object-->
+      <input type="text" placeholder="   Name" ng-model="$ctrl.info.name"/>
+      <input type="text" placeholder="   Address" ng-model="$ctrl.info.address"/>
+      <input type="text" placeholder="   City" ng-model="$ctrl.info.city"/>
+      <input type="text" placeholder="   State" ng-model="$ctrl.info.state"/>
+      <input type="number" placeholder="   Zip" ng-model="$ctrl.info.zip"/>
+    </div>
+    <select ng-model="$ctrl.info.lot" class="lot">
+      <!--when a lot is clicked, it will be stored in the info object as a property
+      of that object-->
+      <option value="" >-Select Lot Size-</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+    <select ng-model="$ctrl.info.drive"class="driveway">
+      <!--TODO logging undefined in the console? FIX THIS!!-->
+
+      <!--when a driveway size is clicked it will be stored into the info object
+      as a property of that object-->
+      <option value="">-Select Driveway Size-</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+    <div id="submit">
+      <button ng-click="$ctrl.Infoservice($ctrl.info)">Submit</button>
+      <!--The function Infoservice is created inside the controller, which is
+       inside the welcomeComponent-->
+
+      <!--when button is clicked, it goes to the select.html page-->
+    </div>
+  </form>
+</div>
