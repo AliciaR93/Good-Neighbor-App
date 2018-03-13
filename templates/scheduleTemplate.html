@@ -5,14 +5,13 @@
       Please choose a day and time for your service.
     </p>
     <!--TODO weather icon needs to be displayed next to the day.
-        When a time is selected on a day, change the color of the button.
         Then submit information. This information should be displayed on the message.html-->
 
     <!--ng-repeat is used on the buttons so each button doesn't need to be written over and over -->
     <!--The arrays are created in the scheduleComponent-->
     <div class="days" ng-repeat="day in $ctrl.days">
       <p>{{day}}</p>
-      <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, day)" ng-class="{selected: time === $ctrl.selectedTime && day === $ctrl.selectedDay}" clicked-state>{{time}}</button>
+      <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, day)" ng-class="{selected: time === $ctrl.selectedTime && day === $ctrl.selectedDay}">{{time}}</button>
     </div>
     <div class="theScheduleButton">
     <button ng-click="$ctrl.infoToShow($ctrl.info)">Schedule</button>

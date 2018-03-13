@@ -1,4 +1,4 @@
 <form class="pickAButton">
-<button class="snow" ng-click="$ctrl.service(info)">Snow Removal</button>
-<button class="grass" ng-click="$ctrl.service(info)">Lawn Care</button>
+<button class="snow" ng-click="$ctrl.sendType($ctrl.choice.snow)">{{$ctrl.choice.snow}}</button>
+<button class="grass" ng-click="$ctrl.sendType($ctrl.choice.lawn)">{{$ctrl.choice.lawn}}</button>
 </form>

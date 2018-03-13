@@ -7,14 +7,11 @@
     // thank the person who entered their information.
     controller: function($location, service){
       var $ctrl = this;
-      $ctrl.service = function() {
-        // var theService = {};
-        // theService.snow = selected.snow;
-        // theService.lawn = selected.lawn;
-        //
-        // service.setInfo(theService);
+      $ctrl.choice = {lawn: "Lawn Care", snow: "Snow Care"};
+      $ctrl.type = service.getType();
+      $ctrl.sendType = function(selected) {
+      service.sendType(selected)
         $location.path("/schedule");
-
       }
     }
   }

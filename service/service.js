@@ -1,35 +1,46 @@
-//Module must be linked in this file
 (function() {
   function service($location, $q) {
     //TODO $http will need to be injected in the service
-    //Object stores name, address, city, state, zip.
-    //TODO FIX THIS! The lot size/driveway size are logging undefined?
-    //TODO Object to store day and time selected
+    //Object stores name, address, city, state, zip, selected service.
     var info = {};
     var whatsClicked = {};
-    // api();
+    var type = "";
     return {
       getInfo: getInfo,
       setInfo: setInfo,
-      itemClicked: itemClicked
-      // api: api
+      saveClicked: saveClicked,
+      getClicked: getClicked,
+      sendType: sendType,
+      getType: getType
     }
     function setInfo(information) {
       info = information;
     }
 
-    function itemClicked(clicked) {
+    function saveClicked(clicked) {
       whatsClicked = clicked;
     }
     function getInfo(){
       return info;
     }
-    //  API
-    // function api(){
-    //   $http.get("").then(function(response){
-    //     console.log(response);
-    //   })
+    function getClicked() {
+
+      return whatsClicked;
+    }
+    function sendType(selected){
+      type = selected;
+      console.log(type);
+    }
+    function getType(){
+      return type;
+    }
+    // function getReceipt(){
+    // determine from info object already on service what receipt should be,
+    //return cost, other service variables
+    //in receipt component:
+    // $ctrl.receipt = service.getReceipt()
     // }
+
   }
 
   angular

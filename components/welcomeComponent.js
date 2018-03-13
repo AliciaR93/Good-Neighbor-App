@@ -5,7 +5,7 @@
     controller: function($location,service) {
       var $ctrl = this;
 
-      $ctrl.Infoservice = function(information){
+      $ctrl.locationInfo = function(information){
         var info = {};
         //the object will store name, address, city, state, zip, lot/driveway size
         info.name = information.name;
@@ -15,6 +15,15 @@
         info.zip = information.zip;
         info.lot = information.lot;
         info.drive = information.drive;
+
+        //function that passes info.city to go through service and log the latitude
+        //and longitude of city entered
+        // $ctrl.getLatLon = function(info.city){
+        //   var latLon = {};
+        //   info.city = latitude.city;
+        //   info.city = longitude.city;
+        // }
+        // // Added lines 19-25 may not work
 
         service.setInfo(info);
         console.log(info);
