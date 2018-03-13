@@ -10,8 +10,8 @@
     <!--Getting the days from the API-->
     <div class="days" ng-repeat="dayObj in $ctrl.days">
       <!-- TODO needs to show icon image -->
-      <img ng-src= "{{$ctrl.dayObj.day.iconLinks}}" />
-      |{{ }}|
+      <img ng-src= "{{dayObj.iconLink}}" />
+
       <p>{{dayObj.day}}</p>
       <!--The time array is created in the schedule component-->
       <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, day)" ng-class="{selected: time === $ctrl.selectedTime && day === $ctrl.selectedDay}">{{time}}</button>

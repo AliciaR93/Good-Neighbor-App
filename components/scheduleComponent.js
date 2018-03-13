@@ -25,7 +25,7 @@
                           // Detroit cant be hardcoded
     apiService.getForecastForLocation(service.getInfo().city).then(function(data){
       var dayNames = data.time.startPeriodName;
-      var iconLinks = data.data.iconLink;
+      var iconLinks = data.iconLink;
 
 
       console.log("data", data);
