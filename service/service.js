@@ -2,7 +2,9 @@
   function service($location, $q) {
     //TODO $http will need to be injected in the service
     //Object stores name, address, city, state, zip, selected service.
-    var info = {};
+    var info = {
+      city: "Detroit, MI"
+    };
     var whatsClicked = {};
     var type = "";
     return {

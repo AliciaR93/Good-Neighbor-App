@@ -4,20 +4,20 @@
     <p class="choose">
       Please choose a day and time for your service.
     </p>
-    <!--TODO weather icon needs to be displayed next to the day.
-        Then submit information. This information should be displayed on the message.html-->
+    <!--TODO weather icon/temperature need to be displayed next to the day-->
 
-    <!--ng-repeat is used on the buttons so each button doesn't need to be written over and over -->
-    <!--The arrays are created in the scheduleComponent-->
-    <div class="days" ng-repeat="day in $ctrl.days">
-      <p>{{day}}</p>
+    <!--ng-repeat is used on the buttons-->
+    <!--Getting the days from the API-->
+    <div class="days" ng-repeat="dayObj in $ctrl.days">
+      <!-- TODO needs to show icon image -->
+      <img ng-src= "{{$ctrl.dayObj.day.iconLinks}}" />
+      |{{ }}|
+      <p>{{dayObj.day}}</p>
+      <!--The time array is created in the schedule component-->
       <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, day)" ng-class="{selected: time === $ctrl.selectedTime && day === $ctrl.selectedDay}">{{time}}</button>
     </div>
     <div class="theScheduleButton">
-    <button ng-click="$ctrl.infoToShow($ctrl.info)">Schedule</button>
+      <button ng-click="$ctrl.infoToShow($ctrl.info)">Schedule</button>
     </div>
-    <!--TODO when schedule is clicked it needs to go to the message page to show confirmation
-      which on the message page it needs to show the day and time and thank the person who
-      entered their information on the welcome page-->
   </form>
 </div>

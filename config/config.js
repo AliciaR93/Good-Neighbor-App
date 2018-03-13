@@ -1,7 +1,5 @@
-//Routing is created in this file
+//Routing
 (function() {
-  //      #!/whatever needs to be used in chrome
-    //When using routing, must have $routeProvider
     angular
       .module("GoodNeighborApp")
       .config(function($routeProvider) {
