@@ -50,8 +50,13 @@
     color: #FFF;
     font-size: 20px;
   }
+  /* Styling for schedule page*/
   .days {
     text-align: center;
+  }
+  #img {
+    height: 75px;
+    width: 100px;
   }
   .times {
     margin-right: 10px;
@@ -62,6 +67,7 @@
   }
   .theScheduleButton {
     margin-left: 130px;
+    /* TODO fix button */
   }
   /*Styling for the Message Page*/
   .thankYou {
@@ -72,7 +78,7 @@
     border: 1px solid black;
     background-color: white;
     height: 300px;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
   }
   .receipt p {
@@ -180,14 +186,13 @@
     margin-top: 30px;
     font-size: 30px;
   }
-  .reciept {
-    font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+  .receipt {
+    height: 500px;
+    width: 400px;
   }
   .ok {
     margin-left: 300px;
-    margin-top: 400px;
+    margin-top: 200px;
     background-color: #E6E6FA;
   }
 }
@@ -208,8 +213,6 @@
 }
 
 #welcome h1 {
-  text-align: center;
-  color: white;
   padding-top: 20px;
   font-size: 50px;
 }
@@ -221,7 +224,6 @@
 }
 
 #input input {
-  border-radius: 10px;
   width: 600px;
   height: 50px;
   margin-left: 150px;
@@ -253,11 +255,11 @@
 
 .pickAButton button {
   margin-left: 500px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
   border-radius: 10px;
   width: 600px;
-  height: 400px;
+  height: 300px;
+  margin-bottom: 20px;
 }
 
 /*Styling for schedule page*/
@@ -275,9 +277,8 @@
   border: 2px solid blue;
 }
 .theScheduleButton {
-  margin-left: 450px;
+  margin-left: 47%;
 }
-
 /*Styling for message page*/
 .thankYou {
   font-size: 40px;
@@ -288,7 +289,8 @@
   text-align: center;
 }
 .ok {
-  margin-left: 450px;
+  margin-left: 750px;
+  /*TODO CENTER*/
 }
 }
 /*DESKTOP ENDS HERE*/

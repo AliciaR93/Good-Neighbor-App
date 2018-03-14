@@ -26,7 +26,6 @@
       return info;
     }
     function getClicked() {
-
       return whatsClicked;
     }
     function sendType(selected){

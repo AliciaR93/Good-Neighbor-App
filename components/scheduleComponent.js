@@ -5,9 +5,11 @@
   controller: function(apiService, $location, service){
     var $ctrl = this;
     // The time array is in the schedule.html
+    //$ctrl.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     $ctrl.times = ["9:00", "10:00","11:00","12:00","1:00","2:00","3:00","4:00"];
     $ctrl.selectedTime = "";
 
+    // TODO its selecting all times not just one time
     $ctrl.itemClicked = function(selectedTime, selectedDay) {
       var whatsClicked = {};
       whatsClicked.day = selectedDay;
@@ -15,22 +17,21 @@
       $ctrl.selectedTime = selectedTime;
       $ctrl.selectedDay = selectedDay;
       service.saveClicked(whatsClicked);
+      console.log(whatsClicked);
     }
 
     $ctrl.infoToShow = function(){
       $location.path("/message");
       console.log(this);
     }
-                          // inside the parameter? service.getInfo(info.city) OR this? service.getInfo()
-                          // Detroit cant be hardcoded
     apiService.getForecastForLocation(service.getInfo().city).then(function(data){
       var dayNames = data.time.startPeriodName;
-      var iconLinks = data.iconLink;
+      var iconLinks = data.data.iconLink;
 
 
       console.log("data", data);
       console.log(dayNames);
-      console.log(iconLinks);
+      // console.log(iconLinks);
 
       $ctrl.days = [];
       for(i=0; i<dayNames.length; i++){

@@ -4,17 +4,16 @@
     <p class="choose">
       Please choose a day and time for your service.
     </p>
-    <!--TODO weather icon/temperature need to be displayed next to the day-->
+    <!--TODO temperature need to be displayed next to the day-->
 
     <!--ng-repeat is used on the buttons-->
     <!--Getting the days from the API-->
     <div class="days" ng-repeat="dayObj in $ctrl.days">
-      <!-- TODO needs to show icon image -->
-      <img ng-src= "{{dayObj.iconLink}}" />
+      <img id="img" ng-src= "{{dayObj.iconLink}}" />
 
       <p>{{dayObj.day}}</p>
       <!--The time array is created in the schedule component-->
-      <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, day)" ng-class="{selected: time === $ctrl.selectedTime && day === $ctrl.selectedDay}">{{time}}</button>
+      <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, dayObj.day)" ng-class="{selected: time === $ctrl.selectedTime && dayObj.day === $ctrl.selectedDay}">{{time}}</button>
     </div>
     <div class="theScheduleButton">
       <button ng-click="$ctrl.infoToShow($ctrl.info)">Schedule</button>
