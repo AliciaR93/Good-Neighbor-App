@@ -12,7 +12,7 @@
     //Getting the type of service selected/time/day.
 
     // TODO this location path needs to be on the ok button
-    // $location.path("/select");
+    //$location.path("/select");
 
   angular
   .module("GoodNeighborApp")

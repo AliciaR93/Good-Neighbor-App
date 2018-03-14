@@ -15,7 +15,7 @@
         info.zip = information.zip;
         info.lot = information.lot;
         info.drive = information.drive;
-        // setInfo() is in the service, takes all the objects properties
+        // setInfo() is in the service, takes the objects properties
         service.setInfo(info);
         console.log(info);
         $location.path("/select");

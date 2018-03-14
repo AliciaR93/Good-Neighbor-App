@@ -5,11 +5,9 @@
   controller: function(apiService, $location, service){
     var $ctrl = this;
     // The time array is in the schedule.html
-    //$ctrl.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     $ctrl.times = ["9:00", "10:00","11:00","12:00","1:00","2:00","3:00","4:00"];
     $ctrl.selectedTime = "";
 
-    // TODO its selecting all times not just one time
     $ctrl.itemClicked = function(selectedTime, selectedDay) {
       var whatsClicked = {};
       whatsClicked.day = selectedDay;
@@ -25,13 +23,11 @@
       console.log(this);
     }
     apiService.getForecastForLocation(service.getInfo().city).then(function(data){
+      //Accessing the days and icons using JSON
       var dayNames = data.time.startPeriodName;
       var iconLinks = data.data.iconLink;
-
-
       console.log("data", data);
       console.log(dayNames);
-      // console.log(iconLinks);
 
       $ctrl.days = [];
       for(i=0; i<dayNames.length; i++){
@@ -42,7 +38,6 @@
         $ctrl.days.push(dayObj);
       }
       console.log($ctrl.days);
-
 
       $ctrl.days = $ctrl.days.filter(function(dayObj) {
         //Any day that end with Night, Tonight return false - don't show them

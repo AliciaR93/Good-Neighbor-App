@@ -1,4 +1,4 @@
-//Module is created
+//Created module
 (function() {
 
   angular
