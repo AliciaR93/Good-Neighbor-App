@@ -12,7 +12,7 @@
         return getForecastForlatLng(latLng.lat, latLng.lng);
       });
     }
-
+    // Gets the latitude and longitude for the city typed in.
     function getlatLngForLocation(location) {
       return $http({
         url: "https://www.mapquestapi.com/geocoding/v1/address?key=ZakKdLzZvhVuf6X38wYaD7IoUwS0JHWy",
@@ -25,8 +25,6 @@
       });
     }
 
-    //Days are being pulled from the API.
-    // Gets the latitude and longitude for the city typed in.
     function getForecastForlatLng(lat, lng) {
       return $http({
         url: "https://forecast.weather.gov/MapClick.php?FcstType=json",
