@@ -9,7 +9,7 @@
     <!--Getting the days from the API-->
     <div class="days" ng-repeat="dayObj in $ctrl.days">
       <img id="img" ng-src= "{{dayObj.iconLink}}" />
-      <div>{{dayObj.temperature}}</div>
+      <div class="temperature">{{dayObj.temperature}}° </div>
       <p>{{dayObj.day}}</p>
       <!--The time array is created in the schedule component-->
       <button class="times" ng-repeat="time in $ctrl.times" ng-click="$ctrl.itemClicked(time, dayObj.day)" ng-class="{selected: time === $ctrl.selectedTime && dayObj.day === $ctrl.selectedDay}">{{time}}</button>
