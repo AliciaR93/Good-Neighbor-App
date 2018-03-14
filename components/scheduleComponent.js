@@ -23,6 +23,7 @@
       console.log(this);
     }
     apiService.getForecastForLocation(service.getInfo().city).then(function(data){
+      var temperature = data.data.temperature;
       //Accessing the days and icons using JSON
       var dayNames = data.time.startPeriodName;
       var iconLinks = data.data.iconLink;
@@ -33,7 +34,8 @@
       for(i=0; i<dayNames.length; i++){
         var dayObj = {
           day: dayNames[i],
-          iconLink: iconLinks[i]
+          iconLink: iconLinks[i],
+          temperature: temperature[i]
         }
         $ctrl.days.push(dayObj);
       }
