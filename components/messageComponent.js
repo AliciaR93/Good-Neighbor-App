@@ -50,12 +50,13 @@
           console.log("Nothing Selected");
         }
       }
+      $ctrl.goHome = function(){
+        $location.path("/welcome");
+      }
     }
+
   };
 
-
-  // TODO this location path needs to be on the ok button
-  //$location.path("/select");
 
   angular
     .module("GoodNeighborApp")
