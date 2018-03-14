@@ -7,7 +7,7 @@
       drive: ""
     };
     var whatsClicked = {};
-    var type = "e";
+    var type = "";
     return {
       getInfo: getInfo,
       setInfo: setInfo,
@@ -36,12 +36,6 @@
     function getType(){
       return type;
     }
-    // function getReceipt(){
-    // determine from info object already on service what receipt should be,
-    //return cost, other service variables
-    //in receipt component:
-    // $ctrl.receipt = service.getReceipt()
-    // }
 
   }
 
