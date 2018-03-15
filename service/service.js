@@ -2,7 +2,7 @@
   function service($location, $q) {
     //Object stores name, address, city, state, zip, selected service.
     var info = {
-      city: "Detroit, MI",
+      city: "",
       lot: "",
       drive: ""
     };
