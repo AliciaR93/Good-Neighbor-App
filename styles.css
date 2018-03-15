@@ -3,47 +3,64 @@
     background-color: #33CC99;
     font-family: 'Cabin', sans-serif;
   }
+
+  .container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+  }
   /*Styling for the Welcome Page*/
   h1 {
     text-align: center;
     color: orange;
   }
   #input input {
-    width: 300px;
+    width: 100%;
+    display: block;
     height: 30px;
     margin-bottom: 10px;
-    margin-left: 20px;
     border: 2px solid black;
     margin-top: 10px;
   }
-  .lot {
+  .lot, .driveway {
     display: block;
-    width: 300px;
-    margin-left: 20px;
-  }
-  .driveway {
-    display: block;
-    width: 300px;
-    margin-left: 20px;
+    width: 101.5%;
+    padding-left: 10px;
+    height: 35px;
+    border: 2px solid black;
+    padding-right: 20px;
     margin-top: 10px;
   }
+
   #submit {
-    margin-left: 150px;
     margin-top: 10px;
+  }
+
+  #submit button {
+    width: 101.5%;
+    background-color: black;
+    color: #fff;
+    height: 34px;
+    border: none;
+    display: block;
+    transition: 0.5s all;
+  }
+
+  #submit button:hover {
+    background-color: lightgray;
   }
   /*Styling for the Select option Page  */
   .pickAButton button {
-    width: 300px;
+    width: 100%;
     height: 200px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    margin-left: 20px;
     border-radius: 10px;
   }
   .snow {
+    margin-top: 50px;
     background-image: url(snowy-street.jpg);
     font-size: 20px;
     color: #FFF;
+    margin-bottom: 10px;
   }
   .grass {
     background-image: url(grass.jpg);
@@ -75,9 +92,10 @@
   #schedule .selected{
     background-color: #6699FF;
   }
-  .theScheduleButton {
-    margin-left: 130px;
-    /* TODO fix button */
+  .theScheduleButton button {
+    display: block;
+    width: 100%;
+
   }
   /*Styling for the Message Page*/
   .thankYou {
@@ -99,7 +117,8 @@
     width: 100px;
     height: 50px;
     border-radius: 10px;
-    margin-top: 450px;
+    display: block;
+    margin: 20px auto;
     background-color: #E6E6FA;
     color: blue;
   }
@@ -109,36 +128,30 @@
 /*TABLET MEDIA QUERY STARTS HERE*/
 @media only screen and (min-width: 768px) {
   #input input {
-    width: 600px;
+    width: 100%;
     height: 50px;
-    margin-left: 60px;
     margin-top: 20px;
     border-radius: 10px;
   }
-  .lot {
-    display: block;
-    width: 400px;
+  .lot, .driveway {
     height: 50px;
-    margin-left: 150px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
-    margin-top: 40px;
-  }
-  .driveway {
-    display: block;
-    width: 400px;
-    height: 50px;
-    margin-left: 150px;
     margin-top: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
+    width: 100.5%;
+    border-radius: 10px;
   }
+
   #submit button {
-    margin-left: 175px;
     width: 100px;
-    height: 75px;
-    margin-top: 60px;
-    border-radius: 10px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 10px
+  }
+
+  #submit {
+    display: flex;
+    justify-content: flex-end;
   }
 
   /*Styling for the Select option Page*/
@@ -197,12 +210,9 @@
     font-size: 30px;
   }
   .receipt {
-    height: 500px;
     width: 400px;
   }
   .ok {
-    margin-left: 300px;
-    margin-top: 200px;
     background-color: #E6E6FA;
   }
 }
@@ -240,36 +250,36 @@
   margin-bottom: 10px;
 }
 
-#submit button {
-  clear: both;
-  height: 40px;
-  width: 300px;
-  border-radius: 10px;
+#submit {
+  justify-content: center;
 }
 
 .lot {
-  float: left;
-  margin-left: 10px;
+  /* float: left; */
+  margin-left: 40px;
+  margin-right: 10px;
   height: 50px;
+  width: 90%;
 }
 
 .driveway {
   height: 50px;
-  float: right;
+  /* float: right; */
+  width: 90%;
   margin-right: 10px;
-  margin-left: 0px;
+  margin-left: 40px;
   margin-top: 40px;
+  margin-bottom: 0;
 }
 
 /*Styling for the select page*/
 
 .pickAButton button {
-  margin-left: 500px;
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto;
   border-radius: 10px;
   width: 600px;
   height: 300px;
-  margin-bottom: 20px;
 }
 
 /*Styling for schedule page*/
@@ -294,14 +304,10 @@
   font-size: 40px;
 }
 
-.reciept {
-  font-size: 30px;
-  text-align: center;
-}
-.ok {
-  margin-left: 750px;
-  margin-top: 20px;
-  /*TODO CENTER*/
+.lot, .driveway{
+  height: 55px;
+  width: 67.15%;
+  margin: 25px auto;
 }
 }
 /*DESKTOP ENDS HERE*/
